@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
 <meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
 <title>Arte Foods — Site todo com 30% OFF</title>
 
 <!--
@@ -53,7 +55,30 @@
     .px-mobile { padding-left:24px !important; padding-right:24px !important; }
     .product-cell { display:block !important; width:100% !important; max-width:100% !important; border-right:0 !important; }
     .hero-head { font-size:48px !important; line-height:0.95 !important; }
-    .product-img { width:100% !important; height:auto !important; max-height:240px !important; }
+    .product-img { width:100% !important; height:auto !important; }
+  }
+
+  /* ── Dark mode ── */
+  @media (prefers-color-scheme: dark) {
+    body, .outer-bg { background:#0D0A1F !important; }
+    .email-wrapper { background:#0D0A1F !important; }
+    /* Hero cream → dark navy */
+    .hero-section { background:#1A1330 !important; }
+    /* Product grid → dark surface */
+    .product-section { background:#121020 !important; }
+    .product-cell { background:#121020 !important; border-color:#2a2540 !important; }
+    /* Text adaptations */
+    .product-name { color:#FFFFFF !important; }
+    .product-weight { color:rgba(255,255,255,0.5) !important; }
+    /* Hero pre-text */
+    .hero-pre { color:#FFB21E !important; }
+    /* Hero heading stays dark on light → stays white on dark */
+    .hero-head { color:#FFFFFF !important; }
+    /* Footer already dark — just lighten borders */
+    .footer-section { background:#080614 !important; }
+    .footer-border { border-color:rgba(255,255,255,0.08) !important; }
+    /* Bottom CTA section */
+    .cta-section { background:#1A1330 !important; }
   }
 </style>
 </head>
@@ -64,8 +89,8 @@
   Mini tortas, mini pizzas, kibes e doces. Corre antes que acabe.
 </div>
 
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ebebee">
-<tr><td align="center" style="padding:24px 0;">
+<table role="presentation" class="outer-bg" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ebebee">
+<tr><td class="email-wrapper" align="center" style="padding:24px 0;">
 
   <!-- ============================================================ -->
   <!--  EMAIL CONTAINER (600px max)                                  -->
@@ -86,8 +111,8 @@
     <!--  HERO (cream + pre + head + urgency + CTA)                    -->
     <!-- ============================================================ -->
     <tr>
-      <td bgcolor="#FFEDC8" align="center" class="px-mobile" style="background:#FFEDC8; padding:40px 36px;">
-        <p class="mso-pacifico" style="margin:0 0 8px 0; font-family:'Pacifico', 'Brush Script MT', cursive; font-size:34px; line-height:1; color:#E8501A;">a oferta é</p>
+      <td bgcolor="#FFEDC8" align="center" class="px-mobile hero-section" style="background:#FFEDC8; padding:40px 36px;">
+        <p class="mso-pacifico hero-pre" style="margin:0 0 8px 0; font-family:'Pacifico', 'Brush Script MT', cursive; font-size:34px; line-height:1; color:#E8501A;">a oferta é</p>
         <h1 class="mso-anton hero-head" style="margin:0; font-family:'Anton', 'Impact', 'Arial Black', sans-serif; font-size:64px; line-height:0.92; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase; font-weight:normal;">
           SITE TODO<br>COM <span style="color:#E8501A;">30% OFF.</span>
         </h1>
@@ -121,18 +146,18 @@
 
     <!-- Linha 1 -->
     <tr>
-      <td bgcolor="#FFFFFF" style="background:#FFFFFF;">
+      <td bgcolor="#FFFFFF" class="product-section" style="background:#FFFFFF;">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
           <tr>
             <!-- Mini Torta de Frango -->
             <td class="product-cell" width="50%" valign="top" style="width:50%; border-right:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0;">
               <a href="https://artefoods.com.br/mini-torta-de-frango?utm_source=email&utm_medium=email&utm_campaign=site-todo-30off" target="_blank" style="text-decoration:none; color:inherit;">
                 <!-- TODO: substituir src pelo URL hospedado -->
-                <img class="product-img" src="https://fwvunexafgzyrrevnuxj.supabase.co/storage/v1/object/public/email-assets/mini-torta-frango.jpg" alt="Mini Torta de Frango" width="300" height="200" style="display:block; width:100%; max-width:300px; height:200px;">
+                <img class="product-img" src="https://fwvunexafgzyrrevnuxj.supabase.co/storage/v1/object/public/email-assets/mini-torta-frango.jpg" alt="Mini Torta de Frango" width="300" style="display:block; width:100%; max-width:300px; height:auto;">
               </a>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr><td align="center" style="padding:22px 18px;">
-                  <p class="mso-anton" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">MINI TORTA<br>DE FRANGO</p>
+                  <p class="mso-anton product-name" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">MINI TORTA<br>DE FRANGO</p>
                   <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;">120g</p>
                   <p style="margin:0 0 14px 0; font-family:'Nunito', Arial, sans-serif; font-weight:800; font-size:18px; color:#E8501A;">
                     <span style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 11,90</span> R$ 8,33
@@ -150,11 +175,11 @@
             <!-- Mini Torta de Chocolate Belga 70% -->
             <td class="product-cell" width="50%" valign="top" style="width:50%; border-bottom:1px solid #f0f0f0;">
               <a href="https://artefoods.com.br/mini-torta-de-chocolate-belga?utm_source=email&utm_medium=email&utm_campaign=site-todo-30off" target="_blank" style="text-decoration:none; color:inherit;">
-                <img class="product-img" src="https://fwvunexafgzyrrevnuxj.supabase.co/storage/v1/object/public/email-assets/mini-torta-chocolate-belga.jpg" alt="Mini Torta de Chocolate Belga 70%" width="300" height="200" style="display:block; width:100%; max-width:300px; height:200px;">
+                <img class="product-img" src="https://fwvunexafgzyrrevnuxj.supabase.co/storage/v1/object/public/email-assets/mini-torta-chocolate-belga.jpg" alt="Mini Torta de Chocolate Belga 70%" width="300" style="display:block; width:100%; max-width:300px; height:auto;">
               </a>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr><td align="center" style="padding:22px 18px;">
-                  <p class="mso-anton" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">CHOCOLATE<br>BELGA 70%</p>
+                  <p class="mso-anton product-name" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">CHOCOLATE<br>BELGA 70%</p>
                   <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;">80g</p>
                   <p style="margin:0 0 14px 0; font-family:'Nunito', Arial, sans-serif; font-weight:800; font-size:18px; color:#E8501A;">
                     <span style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 13,90</span> R$ 9,73
@@ -181,11 +206,11 @@
             <!-- Mini Pizza Marguerita -->
             <td class="product-cell" width="50%" valign="top" style="width:50%; border-right:1px solid #f0f0f0;">
               <a href="https://artefoods.com.br/mini-pizza-marguerita?utm_source=email&utm_medium=email&utm_campaign=site-todo-30off" target="_blank" style="text-decoration:none; color:inherit;">
-                <img class="product-img" src="https://fwvunexafgzyrrevnuxj.supabase.co/storage/v1/object/public/email-assets/mini-pizza-marguerita.jpg" alt="Mini Pizza Marguerita Integral" width="300" height="200" style="display:block; width:100%; max-width:300px; height:200px;">
+                <img class="product-img" src="https://fwvunexafgzyrrevnuxj.supabase.co/storage/v1/object/public/email-assets/mini-pizza-marguerita.jpg" alt="Mini Pizza Marguerita Integral" width="300" style="display:block; width:100%; max-width:300px; height:auto;">
               </a>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr><td align="center" style="padding:22px 18px;">
-                  <p class="mso-anton" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">MINI PIZZA<br>MARGUERITA</p>
+                  <p class="mso-anton product-name" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">MINI PIZZA<br>MARGUERITA</p>
                   <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;">150g · integral</p>
                   <p style="margin:0 0 14px 0; font-family:'Nunito', Arial, sans-serif; font-weight:800; font-size:18px; color:#E8501A;">
                     <span style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 13,90</span> R$ 9,73
@@ -203,11 +228,11 @@
             <!-- Kibe Assado de Queijo -->
             <td class="product-cell" width="50%" valign="top" style="width:50%;">
               <a href="https://artefoods.com.br/kibe-assado-recheado-com-queijo?utm_source=email&utm_medium=email&utm_campaign=site-todo-30off" target="_blank" style="text-decoration:none; color:inherit;">
-                <img class="product-img" src="https://fwvunexafgzyrrevnuxj.supabase.co/storage/v1/object/public/email-assets/kibe.jpg" alt="Kibe Assado Recheado com Queijo" width="300" height="200" style="display:block; width:100%; max-width:300px; height:200px;">
+                <img class="product-img" src="https://fwvunexafgzyrrevnuxj.supabase.co/storage/v1/object/public/email-assets/kibe.jpg" alt="Kibe Assado Recheado com Queijo" width="300" style="display:block; width:100%; max-width:300px; height:auto;">
               </a>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr><td align="center" style="padding:22px 18px;">
-                  <p class="mso-anton" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">KIBE ASSADO<br>DE QUEIJO</p>
+                  <p class="mso-anton product-name" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">KIBE ASSADO<br>DE QUEIJO</p>
                   <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;">110g</p>
                   <p style="margin:0 0 14px 0; font-family:'Nunito', Arial, sans-serif; font-weight:800; font-size:18px; color:#E8501A;">
                     <span style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 13,90</span> R$ 9,73
@@ -230,7 +255,7 @@
     <!--  BIG CTA bottom                                               -->
     <!-- ============================================================ -->
     <tr>
-      <td bgcolor="#FFEDC8" align="center" class="px-mobile" style="background:#FFEDC8; padding:36px 32px; border-top:1px solid rgba(30,22,61,0.08);">
+      <td bgcolor="#FFEDC8" align="center" class="px-mobile cta-section" style="background:#FFEDC8; padding:36px 32px; border-top:1px solid rgba(30,22,61,0.08);">
         <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
           <tr>
             <td bgcolor="#1E163D" style="border-radius:999px;">
@@ -254,10 +279,10 @@
     <!--  FOOTER                                                       -->
     <!-- ============================================================ -->
     <tr>
-      <td bgcolor="#1E163D" class="px-mobile" style="background:#1E163D; padding:36px 32px 28px 32px;">
+      <td bgcolor="#1E163D" class="px-mobile footer-section" style="background:#1E163D; padding:36px 32px 28px 32px;">
 
         <!-- Colunas -->
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-bottom:1px solid rgba(255,255,255,0.12); padding-bottom:24px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="footer-border" style="border-bottom:1px solid rgba(255,255,255,0.12); padding-bottom:24px;">
           <tr>
             <td class="product-cell" width="50%" valign="top" style="width:50%; padding-right:12px;">
               <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:900; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#FFB21E;">Contato</p>
