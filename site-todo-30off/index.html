@@ -74,10 +74,13 @@
     /* Product grid → dark surface */
     .product-section { background:#121020 !important; }
     .product-cell { background:#121020 !important; border-color:#2a2540 !important; }
-    /* Product text: names white, weight/meta muted, original price muted */
+    /* Product text */
     .product-name { color:#FFFFFF !important; }
     .product-section td p { color:#FFFFFF !important; }
-    .product-section td p span { color:rgba(255,255,255,0.4) !important; }
+    /* Weight label: swap opacity for a rgba color so não some */
+    .product-weight { color:rgba(255,255,255,0.55) !important; opacity:1 !important; }
+    /* Strikethrough original price */
+    .price-original { color:rgba(255,255,255,0.4) !important; opacity:1 !important; }
     /* Keep discount price orange */
     .product-section td p[style*="#E8501A"] { color:#E8501A !important; }
 
@@ -166,9 +169,9 @@
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr><td align="center" style="padding:22px 18px;">
                   <p class="mso-anton product-name" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">MINI TORTA<br>DE FRANGO</p>
-                  <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;">120g</p>
+                  <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;" class="product-weight">120g</p>
                   <p style="margin:0 0 14px 0; font-family:'Nunito', Arial, sans-serif; font-weight:800; font-size:18px; color:#E8501A;">
-                    <span style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 11,90</span> R$ 8,33
+                    <span class="price-original" style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 11,90</span> R$ 8,33
                   </p>
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
                     <tr><td bgcolor="#1E163D" style="border-radius:999px;">
@@ -188,9 +191,9 @@
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr><td align="center" style="padding:22px 18px;">
                   <p class="mso-anton product-name" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">CHOCOLATE<br>BELGA 70%</p>
-                  <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;">80g</p>
+                  <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;" class="product-weight">80g</p>
                   <p style="margin:0 0 14px 0; font-family:'Nunito', Arial, sans-serif; font-weight:800; font-size:18px; color:#E8501A;">
-                    <span style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 13,90</span> R$ 9,73
+                    <span class="price-original" style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 13,90</span> R$ 9,73
                   </p>
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
                     <tr><td bgcolor="#1E163D" style="border-radius:999px;">
@@ -219,9 +222,9 @@
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr><td align="center" style="padding:22px 18px;">
                   <p class="mso-anton product-name" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">MINI PIZZA<br>MARGUERITA</p>
-                  <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;">150g · integral</p>
+                  <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;" class="product-weight">150g · integral</p>
                   <p style="margin:0 0 14px 0; font-family:'Nunito', Arial, sans-serif; font-weight:800; font-size:18px; color:#E8501A;">
-                    <span style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 13,90</span> R$ 9,73
+                    <span class="price-original" style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 13,90</span> R$ 9,73
                   </p>
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
                     <tr><td bgcolor="#1E163D" style="border-radius:999px;">
@@ -241,9 +244,9 @@
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr><td align="center" style="padding:22px 18px;">
                   <p class="mso-anton product-name" style="margin:0 0 4px 0; font-family:'Anton', 'Impact', sans-serif; font-size:22px; line-height:1; letter-spacing:0.5px; color:#1E163D; text-transform:uppercase;">KIBE ASSADO<br>DE QUEIJO</p>
-                  <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;">110g</p>
+                  <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:700; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:#1E163D; opacity:0.55;" class="product-weight">110g</p>
                   <p style="margin:0 0 14px 0; font-family:'Nunito', Arial, sans-serif; font-weight:800; font-size:18px; color:#E8501A;">
-                    <span style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 13,90</span> R$ 9,73
+                    <span class="price-original" style="text-decoration:line-through; opacity:0.5; font-size:13px; color:#1E163D; margin-right:6px; font-weight:500;">R$ 13,90</span> R$ 9,73
                   </p>
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
                     <tr><td bgcolor="#1E163D" style="border-radius:999px;">
