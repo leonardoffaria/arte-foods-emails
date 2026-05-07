@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arte Foods — Promo Dia das Mães rolando · 10, 20 e 30% off</title>
+<!--
+  Subject: 💛 Promo Dia das Mães rolando: 10, 20 e 30% off no site
+  Preheader: Tá ativo agora. Acaba domingo, 10/05. Pede e recebe a tempo.
+  Template: E1 · Hero Promo
+  Disparo: Quarta 06/05/2026 (promo já ativa)
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Nunito:wght@600;700;800;900&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1E163D;
+    --amber: #FFB21E;
+    --white: #FFFFFF;
+    --cream: #FFEDC8;
+    --orange: #E8501A;
+
+    --font-display: 'Anton', sans-serif;
+    --font-script: 'Pacifico', cursive;
+    --font-heading: 'Nunito', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    background: #ebebee;
+    color: var(--navy);
+    padding: 24px 0;
+  }
+  img { display: block; max-width: 100%; }
+
+  .email {
+    width: 100%; max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 8px 40px rgba(30,22,61,0.15);
+    overflow: hidden;
+  }
+
+  /* HEADER (logo SVG real) */
+  .e-header { background: var(--navy); padding: 28px 32px; text-align: center; }
+  .e-header img.logo { height: 56px; width: auto; display: inline-block; }
+
+  /* E1 HERO */
+  .e1-hero { position: relative; }
+  .e1-hero .photo {
+    height: 380px;
+    background-size: cover;
+    background-position: center 60%;
+  }
+  .e1-hero .overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg,
+      rgba(30,22,61,0.15) 0%,
+      rgba(30,22,61,0.45) 60%,
+      rgba(30,22,61,0.85) 100%);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 32px 36px;
+  }
+  .e1-hero .pre {
+    font-family: var(--font-script); font-size: 28px;
+    color: var(--amber); line-height: 1; margin-bottom: 8px;
+  }
+  .e1-hero .head {
+    font-family: var(--font-display); font-size: 56px;
+    line-height: 0.92; color: var(--white);
+    letter-spacing: 0.5px;
+  }
+  .e1-hero .head .acc { color: var(--amber); }
+
+  /* BODY */
+  .e1-body {
+    padding: 36px 36px 28px;
+    background: var(--white);
+    text-align: center;
+  }
+  .e1-body p {
+    font-size: 16px; line-height: 1.6;
+    color: var(--navy);
+    margin-bottom: 18px;
+  }
+  .e1-body p strong { color: var(--orange); font-weight: 800; }
+  .e1-body .urgency {
+    margin-top: 8px;
+    font-family: var(--font-heading); font-weight: 800;
+    font-size: 13px; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  /* CTA */
+  .e1-cta-wrap { padding: 0 36px 40px; text-align: center; background: var(--white); }
+  .e-cta {
+    display: inline-block;
+    font-family: var(--font-heading); font-weight: 900;
+    font-size: 14px; letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 32px;
+    border-radius: 999px;
+    background: var(--navy); color: var(--amber);
+    transition: opacity 0.2s;
+  }
+  .e-cta:hover { opacity: 0.9; }
+
+  /* FOOTER (padrão Arte Foods — INVIOLÁVEL) */
+  .e-footer { background: var(--navy); padding: 36px 32px 28px; }
+  .e-footer .ft-cols {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    margin-bottom: 28px; padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .e-footer .ft-cols h4 {
+    font-family: var(--font-heading); font-weight: 900;
+    font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+  .e-footer .ft-cols a, .e-footer .ft-cols div {
+    color: var(--white); text-decoration: none;
+    font-size: 13px; line-height: 1.7;
+    display: block;
+  }
+  .e-footer .ft-cols a { opacity: 0.85; }
+  .e-footer .ft-cols a:hover { opacity: 1; color: var(--amber); }
+
+  .e-footer .ft-social { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
+  .e-footer .ft-social a {
+    width: 36px; height: 36px;
+    background: var(--amber); color: var(--navy);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+  }
+  .e-footer .ft-social a svg { width: 16px; height: 16px; fill: currentColor; }
+
+  .e-footer .ft-meta {
+    text-align: center;
+    font-size: 11px; line-height: 1.6;
+    color: rgba(255,255,255,0.5);
+  }
+  .e-footer .ft-meta a { color: var(--amber); text-decoration: none; }
+
+  /* Header e footer mantêm mesmo navy em qualquer modo (sem override dark) */
+</style>
+</head>
+<body>
+
+<!-- Preheader -->
+<div style="display:none; max-height:0; overflow:hidden; opacity:0; font-size:1px; color:#ebebee; line-height:1px;">
+  Tá ativo agora. Acaba domingo, 10/05. Pede e recebe a tempo.
+</div>
+
+<svg style="display:none">
+  <symbol id="ic-whatsapp" viewBox="0 0 32 32"><path d="M16 2C8.27 2 2 8.27 2 16c0 2.47.65 4.79 1.79 6.81L2 30l7.45-1.95A13.94 13.94 0 0 0 16 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm0 25.5c-2.05 0-4-.55-5.7-1.6l-4.1 1.07 1.1-3.99A11.5 11.5 0 1 1 16 27.5zm6.36-8.6c-.35-.18-2.07-1.02-2.39-1.13-.32-.12-.55-.18-.79.18-.23.35-.91 1.13-1.11 1.36-.21.23-.41.27-.76.09-.35-.18-1.48-.55-2.82-1.74-1.04-.93-1.74-2.07-1.95-2.42-.21-.35-.02-.54.16-.71.16-.16.35-.41.53-.62.18-.21.23-.35.35-.59.12-.23.06-.44-.03-.62-.09-.18-.79-1.9-1.08-2.6-.28-.69-.57-.6-.79-.6h-.67c-.23 0-.61.09-.93.44-.32.35-1.22 1.19-1.22 2.91 0 1.71 1.25 3.37 1.43 3.6.18.23 2.46 3.75 5.95 5.26.83.36 1.48.57 1.99.74.84.27 1.6.23 2.2.14.67-.1 2.07-.85 2.36-1.66.29-.81.29-1.51.21-1.66-.09-.16-.32-.25-.67-.43z"/></symbol>
+  <symbol id="ic-instagram" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13.67.65 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91A5.86 5.86 0 0 0 21.99 2 5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-11.84a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></symbol>
+</svg>
+
+<div class="email">
+
+  <!-- Header -->
+  <div class="e-header">
+    <img src="https://leonardoffaria.github.io/arte-foods-emails/dia-das-maes-2026/wordmark-whiteamber.svg" alt="Arte Foods" class="logo">
+  </div>
+
+  <!-- Hero -->
+  <div class="e1-hero">
+    <div class="photo" style="background-image: url('https://leonardoffaria.github.io/arte-foods-emails/dia-das-maes-2026/hero-cena-b.jpg'); background-position: center 35%;"></div>
+    <div class="overlay">
+      <div class="pre">rolando agora —</div>
+      <div class="head">10, 20 E 30%<br><span class="acc">OFF NO SITE.</span></div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="e1-body">
+    <p>Promoção Dia das Mães da Arte Foods <strong>tá ativa</strong>.</p>
+    <p>Descontos de <strong>10, 20 e 30%</strong> espalhados pelo site — em mini tortas, quiches, mini pizzas, kibes, coxinhas e muito mais. Tudo artesanal, sem conservantes, prontinho em 3 minutos.</p>
+    <p style="margin-top:8px;"><em>Pede agora e recebe a tempo da mesa de domingo.</em></p>
+    <div class="urgency">⏰ Acaba domingo, 10/05</div>
+  </div>
+
+  <!-- CTA -->
+  <div class="e1-cta-wrap">
+    <a href="https://artefoods.com.br/?utm_source=email&utm_medium=email&utm_campaign=dia-das-maes-2026&utm_content=lancamento" class="e-cta">Comprar agora →</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="e-footer">
+    <div class="ft-cols">
+      <div>
+        <h4>Contato</h4>
+        <a href="https://wa.me/5511961905468">WhatsApp · 11 96190·5468</a>
+        <a href="tel:1146731228">Televendas · 11 4673·1228</a>
+        <a href="mailto:vendas@artefoods.com.br">vendas@artefoods.com.br</a>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <a href="https://artefoods.com.br/perguntas-frequentes">Perguntas frequentes</a>
+        <a href="https://artefoods.com.br/privacidade">Privacidade e cookies</a>
+        <a href="https://artefoods.com.br/termos-de-uso">Termos de uso</a>
+        <a href="https://artefoods.com.br/contato">Contato</a>
+      </div>
+    </div>
+
+    <div class="ft-social">
+      <a href="https://instagram.com/artefoodsoficial" aria-label="Instagram"><svg><use href="#ic-instagram"/></svg></a>
+      <a href="https://wa.me/5511961905468" aria-label="WhatsApp"><svg><use href="#ic-whatsapp"/></svg></a>
+    </div>
+
+    <div class="ft-meta">
+      ©2026 Arte Foods<br>
+      <a href="https://artefoods.com.br">artefoods.com.br</a> · <a href="%unsubscribe%">descadastrar</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
