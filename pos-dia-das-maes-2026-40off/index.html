@@ -23,6 +23,27 @@
 </xml>
 </noscript>
 <![endif]-->
+<!-- Mobile responsive: @media só funciona em <style>, sobrescreve o inline em telas <=600px -->
+<style type="text/css">
+  @media only screen and (max-width: 600px) {
+    .mob-pad-body { padding: 24px 20px 20px 20px !important; }
+    .mob-pad-header { padding: 22px 24px !important; }
+    .mob-pad-hero-text { padding: 22px 22px 26px 22px !important; }
+    .mob-pad-footer { padding: 28px 22px 22px 22px !important; }
+    .mob-logo { width: 150px !important; }
+    .mob-pre { font-size: 20px !important; }
+    .mob-head { font-size: 38px !important; }
+    .mob-promo-nums { font-size: 60px !important; }
+    .mob-promo-pad { padding: 26px 18px !important; }
+    .mob-cta { padding: 14px 32px !important; font-size: 14px !important; }
+    .mob-urgency { padding: 14px 18px !important; }
+    .mob-urgency-h { font-size: 13px !important; }
+    .mob-urgency-s { font-size: 12px !important; }
+    .mob-stack { display: block !important; width: 100% !important; padding: 0 0 18px 0 !important; }
+    .mob-stack-last { padding: 0 !important; }
+    .mob-body-p { font-size: 14px !important; }
+  }
+</style>
 </head>
 <body style="margin:0; padding:0; background:#ebebee; font-family:'DM Sans', Arial, sans-serif; color:#1E163D;">
 
@@ -40,8 +61,8 @@
 
         <!-- HEADER -->
         <tr>
-          <td bgcolor="#1E163D" align="center" style="background:#1E163D; padding:28px 32px;">
-            <img src="https://leonardoffaria.github.io/arte-foods-emails/pos-dia-das-maes-2026-40off/wordmark-whiteamber.png" alt="Arte Foods" width="180" height="auto" style="display:block; width:180px; height:auto; border:0; outline:none; text-decoration:none;">
+          <td bgcolor="#1E163D" align="center" class="mob-pad-header" style="background:#1E163D; padding:28px 32px;">
+            <img src="https://leonardoffaria.github.io/arte-foods-emails/pos-dia-das-maes-2026-40off/wordmark-whiteamber.png" alt="Arte Foods" width="180" height="auto" class="mob-logo" style="display:block; width:180px; height:auto; border:0; outline:none; text-decoration:none;">
           </td>
         </tr>
 
@@ -54,9 +75,9 @@
 
         <!-- HERO TEXT BAR (navy bg, simulando overlay) -->
         <tr>
-          <td bgcolor="#1E163D" align="center" style="background:#1E163D; padding:28px 36px 32px 36px;">
-            <p style="margin:0 0 8px 0; font-family:'Pacifico', cursive; font-size:24px; line-height:1.1; color:#FFB21E;">esperamos que o domingo tenha sido lindo —</p>
-            <p style="margin:0; font-family:'Anton', 'Impact', sans-serif; font-size:48px; line-height:0.95; color:#FFFFFF; letter-spacing:0.5px; text-transform:uppercase;">
+          <td bgcolor="#1E163D" align="center" class="mob-pad-hero-text" style="background:#1E163D; padding:28px 36px 32px 36px;">
+            <p class="mob-pre" style="margin:0 0 8px 0; font-family:'Pacifico', cursive; font-size:24px; line-height:1.1; color:#FFB21E;">esperamos que o domingo tenha sido lindo —</p>
+            <p class="mob-head" style="margin:0; font-family:'Anton', 'Impact', sans-serif; font-size:48px; line-height:0.95; color:#FFFFFF; letter-spacing:0.5px; text-transform:uppercase;">
               BORA ENCHER<br>
               <span style="color:#FFB21E;">O FREEZER.</span>
             </p>
@@ -65,21 +86,21 @@
 
         <!-- BODY -->
         <tr>
-          <td align="center" style="background:#FFFFFF; padding:36px 36px 28px 36px;">
+          <td align="center" class="mob-pad-body" style="background:#FFFFFF; padding:36px 36px 28px 36px;">
 
-            <p style="margin:0 0 16px 0; font-family:'DM Sans', Arial, sans-serif; font-size:15px; line-height:1.65; color:#1E163D;">
+            <p class="mob-body-p" style="margin:0 0 16px 0; font-family:'DM Sans', Arial, sans-serif; font-size:15px; line-height:1.65; color:#1E163D;">
               A mesa de domingo foi feliz, mãe abraçada, todos satisfeitos. Agora vem o segundo turno: <strong style="color:#E8501A; font-weight:800;">você abastecendo a semana sem complicação.</strong>
             </p>
 
-            <p style="margin:0 0 16px 0; font-family:'DM Sans', Arial, sans-serif; font-size:15px; line-height:1.65; color:#1E163D;">
+            <p class="mob-body-p" style="margin:0 0 16px 0; font-family:'DM Sans', Arial, sans-serif; font-size:15px; line-height:1.65; color:#1E163D;">
               Mini tortas, quiches, mini pizzas, kibes assados, coxinhas fit, empanados — tudo artesanal, sem conservantes, prontinho em 3 minutos no forno.
             </p>
 
             <!-- Promo block -->
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:26px 0;">
               <tr>
-                <td bgcolor="#1E163D" align="center" style="background:#1E163D; padding:32px 24px; border-radius:12px;">
-                  <p style="margin:0; font-family:'Anton', 'Impact', sans-serif; font-size:80px; line-height:1; color:#FFFFFF; letter-spacing:1px;">
+                <td bgcolor="#1E163D" align="center" class="mob-promo-pad" style="background:#1E163D; padding:32px 24px; border-radius:12px;">
+                  <p class="mob-promo-nums" style="margin:0; font-family:'Anton', 'Impact', sans-serif; font-size:80px; line-height:1; color:#FFFFFF; letter-spacing:1px;">
                     40% <span style="color:#FFB21E;">OFF</span>
                   </p>
                   <p style="margin:12px 0 0 0; font-family:'DM Sans', Arial, sans-serif; font-size:14px; color:#FFFFFF; opacity:0.85;">
@@ -93,7 +114,7 @@
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
               <tr>
                 <td bgcolor="#FFB21E" align="center" style="background:#FFB21E; border-radius:100px;">
-                  <a href="https://artefoods.com.br?utm_source=email&utm_medium=email&utm_campaign=pos-maes-40off&utm_content=cta-principal" target="_blank" style="display:inline-block; padding:16px 44px; font-family:'Nunito', Arial, sans-serif; font-weight:900; font-size:16px; color:#1E163D; text-decoration:none; letter-spacing:1px; text-transform:uppercase;">
+                  <a href="https://artefoods.com.br?utm_source=email&utm_medium=email&utm_campaign=pos-maes-40off&utm_content=cta-principal" target="_blank" class="mob-cta" style="display:inline-block; padding:16px 44px; font-family:'Nunito', Arial, sans-serif; font-weight:900; font-size:16px; color:#1E163D; text-decoration:none; letter-spacing:1px; text-transform:uppercase;">
                     Aproveitar agora &rarr;
                   </a>
                 </td>
@@ -103,11 +124,11 @@
             <!-- Urgência -->
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:26px;">
               <tr>
-                <td bgcolor="#FFEDC8" align="center" style="background:#FFEDC8; padding:16px 24px; border-radius:8px;">
-                  <p style="margin:0 0 4px 0; font-family:'Nunito', Arial, sans-serif; font-weight:900; font-size:14px; color:#E8501A;">
+                <td bgcolor="#FFEDC8" align="center" class="mob-urgency" style="background:#FFEDC8; padding:16px 24px; border-radius:8px;">
+                  <p class="mob-urgency-h" style="margin:0 0 4px 0; font-family:'Nunito', Arial, sans-serif; font-weight:900; font-size:14px; color:#E8501A;">
                     ⏰ Promo acaba amanhã (segunda) às 12h
                   </p>
-                  <p style="margin:0; font-family:'DM Sans', Arial, sans-serif; font-size:13px; color:#1E163D;">
+                  <p class="mob-urgency-s" style="margin:0; font-family:'DM Sans', Arial, sans-serif; font-size:13px; color:#1E163D;">
                     última janela pra receber a tempo da sua semana
                   </p>
                 </td>
@@ -119,12 +140,12 @@
 
         <!-- FOOTER -->
         <tr>
-          <td bgcolor="#1E163D" style="background:#1E163D; padding:36px 32px 28px 32px;">
+          <td bgcolor="#1E163D" class="mob-pad-footer" style="background:#1E163D; padding:36px 32px 28px 32px;">
 
-            <!-- 2 colunas Contato | Institucional -->
+            <!-- 2 colunas Contato | Institucional (stack em mobile) -->
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-bottom:1px solid rgba(255,255,255,0.12); padding-bottom:24px;">
               <tr>
-                <td width="50%" valign="top" style="width:50%; padding-right:12px;">
+                <td width="50%" valign="top" class="mob-stack" style="width:50%; padding-right:12px;">
                   <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:900; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#FFB21E;">Contato</p>
                   <p style="margin:0; font-family:'DM Sans', Arial, sans-serif; font-size:13px; line-height:1.7; color:#FFFFFF;">
                     <a href="https://wa.me/5511961905468" target="_blank" style="color:#FFFFFF; text-decoration:none; opacity:0.85;">WhatsApp &middot; 11 96190&middot;5468</a><br>
@@ -132,7 +153,7 @@
                     <a href="mailto:contato@artefoods.com.br" style="color:#FFFFFF; text-decoration:none; opacity:0.85;">contato@artefoods.com.br</a>
                   </p>
                 </td>
-                <td width="50%" valign="top" style="width:50%; padding-left:12px;">
+                <td width="50%" valign="top" class="mob-stack mob-stack-last" style="width:50%; padding-left:12px;">
                   <p style="margin:0 0 10px 0; font-family:'Nunito', Arial, sans-serif; font-weight:900; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#FFB21E;">Institucional</p>
                   <p style="margin:0; font-family:'DM Sans', Arial, sans-serif; font-size:13px; line-height:1.7; color:#FFFFFF;">
                     <a href="https://artefoods.com.br/perguntas-frequentes" target="_blank" style="color:#FFFFFF; text-decoration:none; opacity:0.85;">Perguntas frequentes</a><br>
