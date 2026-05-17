@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
 <title>Arte Foods — 30% OFF continua · só hoje</title>
 <!--
   Subject:    ⏰ Último dia do 30% OFF — só hoje, site todo
@@ -14,13 +16,27 @@
 <noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript>
 <![endif]-->
 <style type="text/css">
+  /* ── Dark mode override — força light em todos os clientes ── */
+  :root { color-scheme: light only; }
+  html, body,
+  table, td, th, div, p, a, span {
+    color-scheme: light only !important;
+  }
+  @media (prefers-color-scheme: dark) {
+    html, body { background:#ebebee !important; color:#1E163D !important; }
+    table[bgcolor="#1E163D"], td[bgcolor="#1E163D"] { background:#1E163D !important; }
+    table[bgcolor="#FFFFFF"], td[bgcolor="#FFFFFF"] { background:#FFFFFF !important; }
+    .force-navy { background:#1E163D !important; }
+    .force-white { background:#FFFFFF !important; }
+  }
+  /* ── Mobile ── */
   @media only screen and (max-width: 600px) {
     .mob-pad-header { padding: 22px 24px !important; }
     .mob-pad-hero { padding: 22px 22px 26px 22px !important; }
     .mob-pad-body { padding: 24px 20px 20px 20px !important; }
     .mob-pad-footer { padding: 28px 22px 22px 22px !important; }
     .mob-logo { width: 88px !important; height: 58px !important; }
-    .mob-pill { font-size: 14px !important; padding: 12px 18px !important; }
+    .mob-pill { font-size: 12px !important; padding: 10px 16px !important; white-space: nowrap !important; }
     .mob-pre { font-size: 22px !important; }
     .mob-mega { font-size: 120px !important; }
     .mob-mega-off { font-size: 72px !important; }
@@ -43,13 +59,13 @@
     <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background:#FFFFFF; box-shadow:0 8px 40px rgba(30,22,61,0.15);">
 
       <tr>
-        <td bgcolor="#1E163D" align="center" class="mob-pad-header" style="background:#1E163D; padding:28px 32px;">
+        <td bgcolor="#1E163D" align="center" class="mob-pad-header force-navy" style="background:#1E163D; padding:28px 32px;">
           <img src="https://leonardoffaria.github.io/arte-foods-emails/fds-30off/wordmark-whiteamber.png" alt="Arte Foods" width="100" height="66" class="mob-logo" style="display:block; width:100px; max-width:100px; height:66px; border:0;">
         </td>
       </tr>
 
       <tr>
-        <td bgcolor="#1E163D" align="center" class="mob-pad-hero" style="background:#1E163D; padding:32px 36px 36px 36px;">
+        <td bgcolor="#1E163D" align="center" class="mob-pad-hero force-navy" style="background:#1E163D; padding:32px 36px 36px 36px;">
 
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto 24px auto;">
             <tr>
@@ -77,7 +93,7 @@
       </tr>
 
       <tr>
-        <td align="center" class="mob-pad-body" style="background:#FFFFFF; padding:36px 36px 28px 36px;">
+        <td align="center" class="mob-pad-body force-white" style="background:#FFFFFF; padding:36px 36px 28px 36px;">
 
           <p class="mob-body-p" style="margin:0 0 14px 0; font-family:'DM Sans', Arial, sans-serif; font-size:16px; line-height:1.6; color:#1E163D;">
             <strong style="color:#E8501A; font-weight:800;">Último dia. Aproveita agora.</strong>
@@ -114,7 +130,7 @@
       </tr>
 
       <tr>
-        <td bgcolor="#1E163D" class="mob-pad-footer" style="background:#1E163D; padding:36px 32px 28px 32px;">
+        <td bgcolor="#1E163D" class="mob-pad-footer force-navy" style="background:#1E163D; padding:36px 32px 28px 32px;">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-bottom:1px solid rgba(255,255,255,0.12); padding-bottom:24px;">
             <tr>
               <td width="50%" valign="top" class="mob-stack" style="width:50%; padding-right:12px;">
