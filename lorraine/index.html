@@ -1,189 +1,127 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>A Mini Quiche Lorraine chegou ao cardápio!</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <!--
   Campanha:  Lançamento Mini Quiche Lorraine
+  Subject A: A Mini Quiche Lorraine chegou ao cardápio! 🧡
   Cupom:     ESPECIAL10 · 10% OFF · mín. R$150 · válido até 20/07
-  Foto hero: lorraine/hero.jpg (placeholder — trocar pela foto real da Lorraine)
+  Hero/selo: imagens (email-safe). hero-banner.png tem foto placeholder — re-renderizar com foto real da Lorraine.
 -->
-<style>
-  :root{
-    --coral:#F5484A; --amarelo:#F6C63C; --ambar:#FFC94D; --laranja:#F2A63B;
-    --choc:#582F19; --verde:#3C8C40; --cinza:#E9E7E4; --texto:#2B1A13;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;padding:0;background:#ebebee;font-family:'DM Sans',Arial,sans-serif;color:var(--texto);-webkit-font-smoothing:antialiased;}
-  .wrap{max-width:600px;margin:0 auto;padding:24px 0;}
-  .card{background:#fff;border-radius:2px;overflow:hidden;box-shadow:0 8px 40px rgba(88,47,25,.15);}
-
-  /* Topbar */
-  .topbar{background:var(--coral);text-align:center;padding:18px 0;}
-  .topbar img{width:104px;height:auto;display:inline-block;vertical-align:middle;}
-
-  /* Hero */
-  .hero{position:relative;background:var(--amarelo);padding:38px 34px 34px;overflow:hidden;}
-  .hero .leaf{position:absolute;z-index:1;}
-  .hero .leaf.tl{top:-14px;left:-10px;transform:rotate(8deg);}
-  .hero .leaf.bc{bottom:-18px;left:44%;transform:rotate(-24deg);}
-  .hero-grid{position:relative;z-index:3;display:flex;align-items:center;gap:10px;}
-  .hero-left{flex:1 1 55%;}
-  .hero-right{flex:1 1 45%;position:relative;min-height:210px;}
-  .hero h1{margin:0 0 20px;font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:25px;line-height:1.12;letter-spacing:.2px;color:var(--coral);text-transform:uppercase;}
-  .btn{display:inline-block;text-decoration:none;font-family:'Nunito',Arial,sans-serif;font-weight:900;text-transform:uppercase;border-radius:100px;}
-  .btn-peca{background:var(--coral);color:var(--ambar);padding:11px 22px;font-size:13px;letter-spacing:.5px;box-shadow:0 6px 14px rgba(245,72,74,.35);}
-  .btn-peca .star{color:var(--ambar);margin-right:6px;}
-
-  /* Hero right composition */
-  .shape{position:absolute;z-index:1;}
-  .shape.coral{width:150px;height:150px;background:var(--coral);border-radius:26px;transform:rotate(-11deg);top:34px;left:34px;}
-  .shape.amber{width:66px;height:66px;background:var(--laranja);border-radius:12px;transform:rotate(18deg);top:6px;right:2px;}
-  .photo{position:absolute;z-index:2;top:26px;left:30px;width:172px;height:172px;border-radius:50%;object-fit:cover;border:5px solid #fff;box-shadow:0 10px 26px rgba(88,47,25,.28);}
-  .spark{position:absolute;z-index:4;}
-  .spark.s1{top:2px;left:14px;} .spark.s2{bottom:16px;left:2px;} .spark.s3{top:60px;right:2px;}
-  .feather{position:absolute;z-index:2;bottom:-6px;right:14px;transform:rotate(12deg);}
-
-  /* Body */
-  .body{padding:34px 44px 26px;text-align:center;}
-  .body p{margin:0;font-size:16px;line-height:1.6;color:var(--texto);}
-  .body b{color:var(--choc);font-weight:800;}
-
-  /* Cupom */
-  .cupom{position:relative;padding:8px 34px 30px;}
-  .cupom-box{background:var(--cinza);border-radius:22px;padding:26px 200px 26px 30px;min-height:150px;}
-  .cupom-code{margin:0 0 8px;font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:30px;letter-spacing:1px;color:#1c140f;}
-  .cupom-box p{margin:0 0 16px;font-size:14px;line-height:1.45;color:#5f574f;max-width:230px;}
-  .btn-quero{background:var(--coral);color:var(--ambar);padding:12px 30px;font-size:14px;letter-spacing:.5px;}
-  .selo{position:absolute;z-index:2;top:50%;right:34px;transform:translateY(-50%);width:172px;height:172px;}
-  .selo-txt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
-  .selo-txt .g{font-family:'Nunito',Arial,sans-serif;font-weight:700;font-size:15px;color:var(--ambar);margin-bottom:-6px;}
-  .selo-txt .n{font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:52px;line-height:.9;color:var(--ambar);}
-  .selo-txt .o{font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:19px;letter-spacing:2px;color:#fff;}
-
-  .valid{text-align:center;font-size:12px;color:#8a8078;margin:2px 0 22px;}
-  .cta-wrap{text-align:center;padding:0 0 36px;}
-  .btn-comprar{background:var(--choc);color:var(--ambar);padding:17px 46px;font-size:15px;letter-spacing:1px;}
-
-  /* Footer */
-  .footer{background:var(--choc);padding:34px 34px 26px;color:rgba(255,255,255,.85);}
-  .foot-grid{display:flex;gap:22px;}
-  .foot-l{flex:1 1 56%;}
-  .foot-r{flex:1 1 44%;}
-  .footer img.logo{width:96px;height:auto;display:block;margin-bottom:14px;}
-  .footer .desc{font-size:13px;line-height:1.7;color:rgba(255,255,255,.8);margin:0;}
-  .siga{display:inline-flex;align-items:center;gap:7px;background:var(--coral);border-radius:100px;padding:7px 16px;font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:12px;color:#fff;text-decoration:none;letter-spacing:.5px;margin-bottom:16px;}
-  .foot-links{margin:0 0 16px;font-size:13px;line-height:1.9;}
-  .foot-links a{color:#fff;text-decoration:none;opacity:.85;display:block;}
-  .foot-contact a{color:#fff;text-decoration:none;opacity:.85;font-size:13px;line-height:2;display:flex;align-items:center;gap:8px;}
-  .foot-contact svg{flex:0 0 auto;opacity:.9;}
-  .copy{margin:22px 0 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);text-align:center;font-size:11px;color:rgba(255,255,255,.5);}
-  .copy a{color:var(--ambar);text-decoration:none;}
-  .copy a.unsub{color:rgba(255,255,255,.5);text-decoration:underline;}
-
+<!--[if mso]><style type="text/css">table{border-collapse:collapse;border-spacing:0;margin:0;}div,td{padding:0;}div{margin:0 !important;}</style><![endif]-->
+<style type="text/css">
   @media only screen and (max-width:600px){
-    .hero{padding:28px 22px;}
-    .hero h1{font-size:24px;}
-    .hero-right{min-height:190px;}
-    .body{padding:28px 24px 22px;}
-    .cupom{padding:8px 22px 26px;}
-    .cupom-box{padding:24px 22px;min-height:0;}
-    .cupom-box p{max-width:none;}
-    .selo{position:relative;top:auto;right:auto;transform:none;margin:18px auto 0;display:block;}
-    .foot-grid{flex-direction:column;gap:20px;}
+    .container{width:100% !important;}
+    .mob-pad{padding:24px 22px !important;}
+    .mob-cta{padding:15px 34px !important;font-size:14px !important;}
+    .mob-p{font-size:15px !important;}
+    .mob-stack{display:block !important;width:100% !important;padding:0 0 18px 0 !important;text-align:center !important;}
+    .mob-stack-last{padding:0 !important;}
+    .mob-img{width:100% !important;height:auto !important;}
+    .mob-selo{margin:8px auto 0 !important;}
   }
 </style>
 </head>
-<body>
-<div class="wrap">
-  <div class="card">
+<body style="margin:0;padding:0;background:#ebebee;font-family:'DM Sans',Arial,sans-serif;color:#2B1A13;">
 
-    <!-- Topbar -->
-    <div class="topbar">
-      <img src="https://leonardoffaria.github.io/arte-foods-emails/assets/logo-arte-foods.png?v=2" alt="Arte Foods">
-    </div>
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;font-size:1px;color:#ebebee;line-height:1px;mso-hide:all;">Parmesão, muçarela, ricota, requeijão cremoso e bacon num sabor único a cada mordida. Use o cupom ESPECIAL10.</div>
 
-    <!-- Hero -->
-    <div class="hero">
-      <!-- folhas decorativas -->
-      <svg class="leaf tl" width="86" height="86" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 4C58 26 74 30 96 30 78 44 74 64 82 92 60 78 40 78 18 92 26 64 22 44 4 30 26 30 42 26 50 4Z" fill="#3C8C40"/></svg>
-      <svg class="leaf bc" width="74" height="74" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 4C58 26 74 30 96 30 78 44 74 64 82 92 60 78 40 78 18 92 26 64 22 44 4 30 26 30 42 26 50 4Z" fill="#357A38"/></svg>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ebebee;">
+  <tr><td align="center" style="padding:24px 0;">
+    <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background:#FFFFFF;box-shadow:0 8px 40px rgba(88,47,25,0.15);">
 
-      <div class="hero-grid">
-        <div class="hero-left">
-          <h1>A Mini Quiche<br>Lorraine chegou<br>ao&nbsp;cardápio!</h1>
-          <a class="btn btn-peca" href="https://artefoods.com.br/?coupon=ESPECIAL10&utm_source=email&utm_medium=email&utm_campaign=lorraine-lancamento&utm_content=hero" target="_blank"><span class="star">★</span> Peça agora</a>
-        </div>
-        <div class="hero-right">
-          <div class="shape coral"></div>
-          <div class="shape amber"></div>
-          <img class="photo" src="https://leonardoffaria.github.io/arte-foods-emails/lorraine/hero.jpg?v=2" alt="Mini Quiche Lorraine">
-          <!-- sparkles -->
-          <svg class="spark s1" width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 0c1 6 5 10 12 11-7 1-11 5-12 12-1-7-5-11-12-12C7 10 11 6 12 0Z"/></svg>
-          <svg class="spark s2" width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 0c1 6 5 10 12 11-7 1-11 5-12 12-1-7-5-11-12-12C7 10 11 6 12 0Z"/></svg>
-          <svg class="spark s3" width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12 0c1 6 5 10 12 11-7 1-11 5-12 12-1-7-5-11-12-12C7 10 11 6 12 0Z"/></svg>
-          <svg class="feather" width="30" height="46" viewBox="0 0 30 46" fill="none"><path d="M15 0C4 12 2 30 12 46c1-14 9-24 18-32C22 12 18 8 15 0Z" fill="#F2A63B"/></svg>
-        </div>
-      </div>
-    </div>
+      <!-- Topbar coral + logo -->
+      <tr><td bgcolor="#F5484A" align="center" style="background:#F5484A;padding:18px 0;font-size:0;line-height:0;">
+        <img src="https://leonardoffaria.github.io/arte-foods-emails/assets/logo-arte-foods.png?v=3" alt="Arte Foods" width="104" style="display:inline-block;width:104px;height:auto;border:0;">
+      </td></tr>
 
-    <!-- Corpo -->
-    <div class="body">
-      <p><b>Tem novidade por aqui!</b> Com uma combinação irresistível de parmesão, muçarela, ricota, requeijão cremoso e bacon, a <b>Mini Quiche Lorraine</b> entrega um sabor único em cada mordida.</p>
-    </div>
+      <!-- Hero (imagem única, email-safe) -->
+      <tr><td style="padding:0;font-size:0;line-height:0;">
+        <a href="https://artefoods.com.br/?coupon=ESPECIAL10&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=lorraine-lancamento&amp;utm_content=hero" target="_blank">
+          <img class="mob-img" src="https://leonardoffaria.github.io/arte-foods-emails/lorraine/hero-banner.png?v=3" alt="A Mini Quiche Lorraine chegou ao cardápio! Peça agora." width="600" style="display:block;width:100%;max-width:600px;height:auto;border:0;">
+        </a>
+      </td></tr>
 
-    <!-- Cupom -->
-    <div class="cupom">
-      <div class="cupom-box">
-        <div class="cupom-code">ESPECIAL10</div>
-        <p>Aproveite o cupom nesse Snack irresistível!</p>
-        <a class="btn btn-quero" href="https://artefoods.com.br/?coupon=ESPECIAL10&utm_source=email&utm_medium=email&utm_campaign=lorraine-lancamento&utm_content=cupom" target="_blank">Quero!</a>
-      </div>
-      <div class="selo">
-        <svg width="172" height="172" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg"><path d="M120.0,0.0 L135.0,25.2 L157.1,5.9 L163.6,34.5 L190.5,22.9 L187.9,52.1 L217.1,49.5 L205.5,76.4 L234.1,82.9 L214.8,105.0 L240.0,120.0 L214.8,135.0 L234.1,157.1 L205.5,163.6 L217.1,190.5 L187.9,187.9 L190.5,217.1 L163.6,205.5 L157.1,234.1 L135.0,214.8 L120.0,240.0 L105.0,214.8 L82.9,234.1 L76.4,205.5 L49.5,217.1 L52.1,187.9 L22.9,190.5 L34.5,163.6 L5.9,157.1 L25.2,135.0 L0.0,120.0 L25.2,105.0 L5.9,82.9 L34.5,76.4 L22.9,49.5 L52.1,52.1 L49.5,22.9 L76.4,34.5 L82.9,5.9 L105.0,25.2 Z" fill="#F5484A"/></svg>
-        <div class="selo-txt"><span class="g">ganhe</span><span class="n">10%</span><span class="o">OFF</span></div>
-      </div>
-    </div>
+      <!-- Corpo -->
+      <tr><td align="center" class="mob-pad" style="background:#FFFFFF;padding:34px 44px 26px 44px;">
+        <p class="mob-p" style="margin:0;font-family:'DM Sans',Arial,sans-serif;font-size:16px;line-height:1.6;color:#2B1A13;text-align:center;">
+          <strong style="color:#582F19;font-weight:800;">Tem novidade por aqui!</strong> Com uma combinação irresistível de parmesão, muçarela, ricota, requeijão cremoso e bacon, a <strong style="color:#582F19;font-weight:800;">Mini Quiche Lorraine</strong> entrega um sabor único em cada mordida.
+        </p>
+      </td></tr>
 
-    <p class="valid">*Válido para pedidos com valor mínimo de R$150,00.</p>
+      <!-- Cupom -->
+      <tr><td class="mob-pad" style="background:#FFFFFF;padding:6px 34px 22px 34px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#E9E7E4" style="background:#E9E7E4;border-radius:22px;">
+          <tr>
+            <td class="mob-stack" valign="middle" style="padding:26px 6px 26px 30px;">
+              <p style="margin:0 0 6px 0;font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:28px;letter-spacing:1px;color:#1c140f;">ESPECIAL10</p>
+              <p style="margin:0 0 16px 0;font-family:'DM Sans',Arial,sans-serif;font-size:14px;line-height:1.45;color:#5f574f;">Aproveite o cupom nesse Snack irresistível!</p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 0 0;" align="left">
+                <tr><td bgcolor="#F5484A" align="center" style="background:#F5484A;border-radius:100px;">
+                  <a href="https://artefoods.com.br/?coupon=ESPECIAL10&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=lorraine-lancamento&amp;utm_content=cupom" target="_blank" style="display:inline-block;padding:12px 30px;font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:14px;color:#FFC94D;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;">Quero!</a>
+                </td></tr>
+              </table>
+            </td>
+            <td class="mob-stack mob-stack-last" valign="middle" align="center" width="180" style="padding:8px 22px 8px 0;">
+              <img class="mob-selo" src="https://leonardoffaria.github.io/arte-foods-emails/lorraine/selo.png?v=3" alt="Ganhe 10% OFF" width="150" style="display:block;width:150px;height:auto;border:0;">
+            </td>
+          </tr>
+        </table>
+      </td></tr>
 
-    <div class="cta-wrap">
-      <a class="btn btn-comprar" href="https://artefoods.com.br/?coupon=ESPECIAL10&utm_source=email&utm_medium=email&utm_campaign=lorraine-lancamento&utm_content=cta-comprar" target="_blank">Comprar agora</a>
-    </div>
+      <!-- Validade -->
+      <tr><td align="center" style="background:#FFFFFF;padding:0 34px 22px 34px;">
+        <p style="margin:0;font-family:'DM Sans',Arial,sans-serif;font-size:12px;line-height:1.5;color:#8a8078;text-align:center;">*Válido para pedidos com valor mínimo de R$150,00. Cupom válido até 20/07.</p>
+      </td></tr>
 
-    <!-- Footer -->
-    <div class="footer">
-      <div class="foot-grid">
-        <div class="foot-l">
-          <img class="logo" src="https://leonardoffaria.github.io/arte-foods-emails/assets/logo-arte-foods.png?v=2" alt="Arte Foods">
-          <p class="desc">Sabores artesanais feitos com carinho para o seu dia a dia. Tortas, quiches, mini pizzas e muito mais, entregues na sua porta.</p>
-        </div>
-        <div class="foot-r">
-          <a class="siga" href="https://instagram.com/artefoodsoficial" target="_blank">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg>
-            NOS SIGA!
-          </a>
-          <div class="foot-links">
-            <a href="https://artefoods.com.br/perguntas-frequentes">Perguntas Frequentes</a>
-            <a href="https://artefoods.com.br/privacidade">Privacidade e Cookies</a>
-            <a href="https://artefoods.com.br/termos-de-uso">Termos de uso</a>
-            <a href="https://artefoods.com.br/contato">Contato</a>
-          </div>
-          <div class="foot-contact">
-            <a href="https://wa.me/5511961905468"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5.3-.5c.1-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 5 5 0 0 0 1 2.6 11 11 0 0 0 4.2 3.7c2 .8 2 .5 2.4.5a2.5 2.5 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c-.1-.1-.3-.2-.5-.3Z"/></svg>WhatsApp · 11 96190-5468</a>
-            <a href="tel:1146731228"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.3 2.3Z"/></svg>Televendas · 11 4673-1228</a>
-            <a href="mailto:vendas@artefoods.com.br"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg>vendas@artefoods.com.br</a>
-          </div>
-        </div>
-      </div>
-      <p class="copy">©2026 Arte Foods · <a href="https://artefoods.com.br">artefoods.com.br</a> · <a class="unsub" href="%unsubscribe%">descadastrar</a></p>
-    </div>
+      <!-- CTA -->
+      <tr><td align="center" style="background:#FFFFFF;padding:0 0 36px 0;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+          <tr><td bgcolor="#582F19" align="center" style="background:#582F19;border-radius:100px;">
+            <a href="https://artefoods.com.br/?coupon=ESPECIAL10&amp;utm_source=email&amp;utm_medium=email&amp;utm_campaign=lorraine-lancamento&amp;utm_content=cta-comprar" target="_blank" class="mob-cta" style="display:inline-block;padding:17px 46px;font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:15px;color:#FFC94D;text-decoration:none;letter-spacing:1px;text-transform:uppercase;">Comprar agora</a>
+          </td></tr>
+        </table>
+      </td></tr>
 
-  </div>
-</div>
+      <!-- Footer -->
+      <tr><td bgcolor="#582F19" class="mob-pad" style="background:#582F19;padding:36px 34px 28px 34px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td valign="top" class="mob-stack" style="width:58%;padding-right:16px;">
+              <img src="https://leonardoffaria.github.io/arte-foods-emails/assets/logo-arte-foods.png?v=3" alt="Arte Foods" width="92" style="display:block;width:92px;height:auto;border:0;margin-bottom:14px;">
+              <p style="margin:0;font-family:'DM Sans',Arial,sans-serif;font-size:13px;line-height:1.7;color:rgba(255,255,255,0.82);">Sabores artesanais feitos com carinho para o seu dia a dia. Tortas, quiches, mini pizzas e muito mais, entregues na sua porta.</p>
+            </td>
+            <td valign="top" class="mob-stack mob-stack-last" style="width:42%;padding-left:8px;">
+              <p style="margin:0 0 10px 0;font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#FFC94D;">Institucional</p>
+              <p style="margin:0 0 18px 0;font-family:'DM Sans',Arial,sans-serif;font-size:13px;line-height:1.8;">
+                <a href="https://artefoods.com.br/perguntas-frequentes" style="color:#FFFFFF;text-decoration:none;opacity:0.85;">Perguntas Frequentes</a><br>
+                <a href="https://artefoods.com.br/privacidade" style="color:#FFFFFF;text-decoration:none;opacity:0.85;">Privacidade e Cookies</a><br>
+                <a href="https://artefoods.com.br/termos-de-uso" style="color:#FFFFFF;text-decoration:none;opacity:0.85;">Termos de uso</a><br>
+                <a href="https://artefoods.com.br/contato" style="color:#FFFFFF;text-decoration:none;opacity:0.85;">Contato</a>
+              </p>
+              <p style="margin:0;font-family:'DM Sans',Arial,sans-serif;font-size:13px;line-height:1.8;color:rgba(255,255,255,0.85);">
+                <a href="https://wa.me/5511961905468" style="color:#FFFFFF;text-decoration:none;opacity:0.85;">WhatsApp · 11 96190-5468</a><br>
+                <a href="tel:1146731228" style="color:#FFFFFF;text-decoration:none;opacity:0.85;">Televendas · 11 4673-1228</a><br>
+                <a href="mailto:vendas@artefoods.com.br" style="color:#FFFFFF;text-decoration:none;opacity:0.85;">vendas@artefoods.com.br</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:24px;border-top:1px solid rgba(255,255,255,0.14);">
+          <tr><td align="center" style="padding-top:20px;">
+            <a href="https://instagram.com/artefoodsoficial" target="_blank" style="display:inline-block;background:#F5484A;border-radius:100px;padding:8px 20px;font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:12px;color:#FFFFFF;text-decoration:none;letter-spacing:1px;">NOS SIGA!</a>
+            <p style="margin:16px 0 0 0;font-family:'DM Sans',Arial,sans-serif;font-size:11px;line-height:1.6;color:rgba(255,255,255,0.5);">
+              ©2026 Arte Foods · <a href="https://artefoods.com.br" style="color:#FFC94D;text-decoration:none;">artefoods.com.br</a> · <a href="%unsubscribe%" style="color:rgba(255,255,255,0.5);text-decoration:underline;">descadastrar</a>
+            </p>
+          </td></tr>
+        </table>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>
 </body>
 </html>
