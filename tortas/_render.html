@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=DM+Sans:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:#fff;font-family:'DM Sans',Arial,sans-serif;}
+  .box{display:inline-block;vertical-align:top;}
+
+  /* HERO faixa amarela 600px */
+  #hero{width:600px;position:relative;background:#F6C63C;padding:38px 34px 34px;overflow:hidden;}
+  #hero .leaf{position:absolute;z-index:1;}
+  #hero .leaf.tl{top:-14px;left:-10px;transform:rotate(8deg);}
+  #hero .leaf.bc{bottom:-18px;left:44%;transform:rotate(-24deg);}
+  #hero .grid{position:relative;z-index:3;display:flex;align-items:center;gap:10px;}
+  #hero .left{flex:1 1 55%;}
+  #hero .right{flex:1 1 45%;position:relative;min-height:210px;}
+  #hero h1{font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:24px;line-height:1.1;letter-spacing:.2px;color:#F5484A;text-transform:uppercase;margin-bottom:4px;}
+  #hero .script{font-family:'Pacifico',cursive;font-weight:400;font-size:34px;line-height:1;color:#582F19;text-transform:none;letter-spacing:0;display:block;margin:2px 0 18px;}
+  .peca{display:inline-block;background:#F5484A;color:#FFC94D;padding:11px 24px;font-family:'Nunito',Arial,sans-serif;font-weight:900;font-size:13px;letter-spacing:.5px;text-transform:uppercase;border-radius:100px;box-shadow:0 6px 14px rgba(245,72,74,.35);}
+  .shape{position:absolute;z-index:1;}
+  .shape.coral{width:150px;height:150px;background:#F5484A;border-radius:26px;transform:rotate(-11deg);top:34px;left:34px;}
+  .shape.amber{width:66px;height:66px;background:#F2A63B;border-radius:12px;transform:rotate(18deg);top:6px;right:2px;}
+  .photo{position:absolute;z-index:2;top:26px;left:30px;width:172px;height:172px;border-radius:50%;object-fit:cover;border:5px solid #fff;box-shadow:0 10px 26px rgba(88,47,25,.28);}
+  .spark{position:absolute;z-index:4;}
+  .spark.s1{top:2px;left:14px;} .spark.s2{bottom:16px;left:2px;} .spark.s3{top:60px;right:2px;}
+  .feather{position:absolute;z-index:2;bottom:-6px;right:14px;transform:rotate(12deg);}
+</style>
+</head>
+<body>
+  <div id="hero" class="box">
+    <svg class="leaf tl" width="86" height="86" viewBox="0 0 100 100" fill="none"><path d="M50 4C58 26 74 30 96 30 78 44 74 64 82 92 60 78 40 78 18 92 26 64 22 44 4 30 26 30 42 26 50 4Z" fill="#3C8C40"/></svg>
+    <svg class="leaf bc" width="74" height="74" viewBox="0 0 100 100" fill="none"><path d="M50 4C58 26 74 30 96 30 78 44 74 64 82 92 60 78 40 78 18 92 26 64 22 44 4 30 26 30 42 26 50 4Z" fill="#357A38"/></svg>
+    <div class="grid">
+      <div class="left">
+        <h1>Sua fome resolvida em</h1>
+        <span class="script">poucos minutos</span>
+        <span class="peca">Aproveite</span>
+      </div>
+      <div class="right">
+        <div class="shape coral"></div>
+        <div class="shape amber"></div>
+        <img class="photo" src="../assets/mini-torta-frango.jpg" alt="">
+        <svg class="spark s1" width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 0c1 6 5 10 12 11-7 1-11 5-12 12-1-7-5-11-12-12C7 10 11 6 12 0Z"/></svg>
+        <svg class="spark s2" width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 0c1 6 5 10 12 11-7 1-11 5-12 12-1-7-5-11-12-12C7 10 11 6 12 0Z"/></svg>
+        <svg class="spark s3" width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12 0c1 6 5 10 12 11-7 1-11 5-12 12-1-7-5-11-12-12C7 10 11 6 12 0Z"/></svg>
+        <svg class="feather" width="30" height="46" viewBox="0 0 30 46" fill="none"><path d="M15 0C4 12 2 30 12 46c1-14 9-24 18-32C22 12 18 8 15 0Z" fill="#F2A63B"/></svg>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
