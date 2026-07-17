@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="524" height="203" viewBox="0 0 524 203">
+  <rect x="0" y="24" width="315" height="155" rx="22" fill="#E9E7E4"/>
+  <text x="36" y="78" font-family="Arial Black,Arial,sans-serif" font-size="29" font-weight="900" fill="#000">SOBREMESA20</text>
+  <text x="36" y="104" font-family="Arial,sans-serif" font-size="12" fill="#151515">Aproveite e garanta seus docinhos</text>
+  <text x="36" y="121" font-family="Arial,sans-serif" font-size="12" fill="#151515">favoritos!</text>
+  <rect x="36" y="139" width="180" height="38" rx="19" fill="#782640"/>
+  <text x="126" y="164" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="14" font-weight="900" fill="#FFB224">QUERO!</text>
+  <ellipse cx="385" cy="101" rx="137" ry="101" fill="#782640"/>
+  <text x="385" y="38" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#FFB224">ganhe</text>
+  <text x="315" y="160" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#FFB224">R$</text>
+  <text x="370" y="158" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="122" font-weight="900" fill="#FFB224">20</text>
+</svg>
