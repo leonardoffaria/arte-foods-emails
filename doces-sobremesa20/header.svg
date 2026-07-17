@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <rect width="1200" height="500" fill="#782640"/>
+  <text x="600" y="55" text-anchor="middle" font-family="Arial,sans-serif" font-style="italic" font-size="32" fill="#fff">- cia da -</text>
+  <text x="600" y="105" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="56" font-weight="900" fill="#fff">TORTA</text>
+  <path d="M0 160 Q26 125 52 160 Q78 125 104 160" fill="#F2DEC6"/>
+  <path d="M0 470 Q26 435 52 470 Q78 435 104 470" fill="#F2DEC6"/>
+  <text x="50" y="250" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#F2DEC6">TODA REFEIÇÃO FICA MUITO</text>
+  <text x="50" y="310" font-family="Arial Black,Arial,sans-serif" font-size="42" font-weight="900" fill="#F2DEC6">MELHOR COM UMA SOBREMESA!</text>
+  <rect x="50" y="350" width="295" height="58" rx="29" fill="#F2DEC6"/>
+  <text x="198" y="387" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="16" font-weight="900" fill="#782640">QUERO CONFERIR!</text>
+  <rect x="625" y="155" width="575" height="315" rx="0" fill="#F2DEC6"/>
+  <path d="M735 170 H995 Q1065 170 1065 240 V315 H880 V470 H735 Q680 470 680 415 V225 Q680 170 735 170Z" fill="#782640" opacity=".95"/>
+  <circle cx="835" cy="270" r="112" fill="#3b1b13" stroke="#1a0b06" stroke-width="8"/>
+  <circle cx="835" cy="270" r="94" fill="#5b281c"/>
+  <path d="M760 250 C810 210 860 320 915 245 M780 300 C835 255 875 340 920 300 M790 225 C835 260 870 205 905 240" stroke="#8a4736" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <circle cx="995" cy="350" r="112" fill="#F4C247" stroke="#F2A324" stroke-width="8"/>
+  <circle cx="995" cy="350" r="91" fill="#F7F1E7"/>
+  <path d="M930 330 C980 300 1030 365 1070 318 M930 370 C990 335 1030 390 1080 355" stroke="#D9CBB6" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M1010 270 L1022 302 L1055 306 L1029 327 L1038 360 L1010 342 L982 360 L991 327 L965 306 L998 302Z" fill="#80A84D" opacity=".8"/>
+</svg>
