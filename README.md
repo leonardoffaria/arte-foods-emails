@@ -1,6 +1,8 @@
 # Última Semana Maio 26 — Publicação no GitHub Pages
 
-Hospedagem pública das **7 fotos ambientadas** + **7 emails HTML** da campanha. As URLs ficam embutidas nos HTMLs e os emails carregam as fotos direto do GitHub Pages quando enviados via RD Station.
+Hospedagem pública dos HTMLs e assets das campanhas de email da Arte Foods e da Cia da Torta. As URLs ficam embutidas nos HTMLs e as imagens carregam direto do GitHub Pages. Os disparos atuais são feitos pelo **Módulo Works**, com entrega via Resend.
+
+> Regra obrigatória: todo HTML de email precisa conter `href="{{unsubscribe_url}}"`. Veja [docs/RESEND-OPT-OUT.md](docs/RESEND-OPT-OUT.md) e valide com `node scripts/check-email-opt-out.mjs`.
 
 ---
 
@@ -16,7 +18,7 @@ _publish/
 │   ├── e5-hero.jpg               ← fds-varias (mãos cortando mini torta)
 │   ├── e6-hero.jpg               ← kibe-porn (kibes empilhados ambientado)
 │   └── e7-hero.jpg               ← hero-cafe-landscape (mesma do banner site)
-├── emails/                       (7 HTMLs prontos pra RD Station)
+├── emails/                       (7 HTMLs de email)
 │   ├── e1-25mai-seg-abertura.html
 │   ├── e2-26mai-ter-mini-tortas.html
 │   ├── e3-27mai-qua-arte-foods-pela-metade.html
@@ -92,13 +94,16 @@ open https://leonardoffaria.github.io/arte-foods-emails/emails/e1-25mai-seg-aber
 
 ---
 
-## 📨 Disparo via RD Station
+## 📨 Disparo via Módulo Works + Resend
 
-1. Abrir `emails/e1-25mai-seg-abertura.html` no editor da RD Station (cola o HTML)
-2. Conferir preview — as fotos hero devem carregar do GitHub Pages
-3. Agendar conforme cronograma:
+1. Rodar `node scripts/check-email-opt-out.mjs`.
+2. Criar a campanha no Módulo Works e usar o HTML validado.
+3. Conferir o preview — as fotos devem carregar do GitHub Pages. O token de descadastro pode aparecer literal no preview web.
+4. Fazer o teste visual pelo Módulo Works. Nesse teste, o link de descadastro usa `#` e não é clicável.
+5. Agendar conforme o cronograma da campanha:
    - E1 Seg 25/05 10h · E2 Ter 26/05 10h · E3 Qua 27/05 10h · E4 Qui 28/05 10h · E5 Sex 29/05 10h · E6 Sáb 30/05 10h · E7 Dom 31/05 09h
-4. Conferir UTMs nos CTAs (todos com `utm_campaign=ultima-semana-maio26`)
+6. Antes do disparo em massa, enviar uma campanha real para uma lista interna e confirmar que **Descadastre-se** abre a página “Descadastro realizado”.
+7. Conferir as UTMs dos CTAs antes do disparo.
 
 ## 🔄 Re-publicar (se trocar foto ou copy)
 
@@ -122,7 +127,7 @@ git push
 **Emails:**
 - Container 600px, dark mode tratado, MSO Outlook fallback
 - UTMs em todos CTAs (`utm_campaign=ultima-semana-maio26&utm_content=<placement>`)
-- Footer pattern Arte Foods (2 colunas + sociais amber + `%unsubscribe%`)
+- Footer com link visível usando `{{unsubscribe_url}}`
 - **Regra 7 do CLAUDE.md:** sem URL/handle como texto visível (apenas em href com UTM)
 
 **Cache busting (se precisar trocar foto após o disparo):**
@@ -137,3 +142,5 @@ git push
 - [ ] Confirmou nome do repo = `arte-foods-emails`?
 - [ ] Se diferente, rodou o `sed` de substituição da URL base (bloco acima)?
 - [ ] Conta GitHub tem Pages habilitado (vem por default em accounts free)?
+- [ ] `node scripts/check-email-opt-out.mjs` terminou com `OK`?
+- [ ] Uma campanha real para a lista interna abriu “Descadastro realizado” ao clicar em **Descadastre-se**?

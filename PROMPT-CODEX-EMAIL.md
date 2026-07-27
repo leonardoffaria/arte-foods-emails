@@ -10,13 +10,26 @@
 
 Você é um dev front-end. Trabalhe no repositório `arte-foods-emails` (site GitHub Pages,
 base pública `https://leonardoffaria.github.io/arte-foods-emails/`). Cada campanha é uma
-pasta com `index.html` + imagens. O HTML é colado no RD Station / disparado como e-mail,
+pasta com `index.html` + imagens. O HTML é usado em campanhas do Módulo Works, com envio via Resend,
 então **PRECISA ser email-safe**.
 
 ### Tarefa
 Criar a pasta `{{slug}}/` com o e-mail da campanha **"{{nome_campanha}}"** e publicar no
 GitHub Pages. Use **`tortas/index.html` como molde** (copie e adapte) — ele já traz topbar,
 footer, botões e responsividade prontos e testados.
+
+### ⚠️ OPT-OUT OBRIGATÓRIO DO MÓDULO WORKS / RESEND
+
+Todo HTML de email precisa manter no footer um link visível com este `href` exato:
+
+```html
+<a href="{{unsubscribe_url}}">Descadastre-se</a>
+```
+
+Não use `%unsubscribe%`, `{{{RESEND_UNSUBSCRIBE_URL}}}`, `mailto:`, página de contato,
+URL fixa ou outro placeholder. `{{unsubscribe_url}}` é substituído pelo Módulo Works por
+uma URL individual antes do envio pelo Resend. O link literal pode parecer quebrado no
+GitHub Pages; isso é esperado.
 
 ### Dados da campanha
 - Slug da pasta: `{{slug}}` (ex.: `mini-pizzas`)
@@ -30,7 +43,7 @@ footer, botões e responsividade prontos e testados.
   topo, 600px de largura) e `selo.png` (o selo "ganhe X% OFF", com fundo cinza `#E9E7E4`).
 
 ### ⚠️ REGRAS EMAIL-SAFE (não quebre — senão o e-mail chega SEM estilo)
-Clientes de e-mail (Gmail, RD Station) **descartam** `<style>` no `<head>` e não suportam
+Clientes de e-mail (Gmail, Outlook e outros) **podem descartar** `<style>` no `<head>` e não suportam
 CSS moderno. **NÃO USE**: classes de CSS para layout, `flexbox`, `position`, `border-radius`
 por classe, `<svg>` inline, `background` por classe. **USE**:
 - `<table>` para todo o layout, estilos **inline** em cada elemento;
@@ -71,9 +84,11 @@ imagem PNG**, nunca como CSS/SVG.
    (cd .. && python3 -m http.server 8791)
    ```
    Apague o `_preview.html` antes de commitar.
-6. **Publicar:** `git add {{slug}}/ && git commit -m "feat({{slug}}): email {{nome_campanha}}" && git pull --rebase origin main && git push origin main`.
+6. **Validar o opt-out:** rode `node scripts/check-email-opt-out.mjs`. Não publique se a
+   validação falhar.
+7. **Publicar:** `git add {{slug}}/ && git commit -m "feat({{slug}}): email {{nome_campanha}}" && git pull --rebase origin main && git push origin main`.
    O Pages propaga em ~1 min. Confirme com `curl -sI https://leonardoffaria.github.io/arte-foods-emails/{{slug}}/index.html` (deve dar 200).
-7. Se atualizar uma imagem depois, suba o sufixo de versão nos `src` (`?v=1` → `?v=2`) para
+8. Se atualizar uma imagem depois, suba o sufixo de versão nos `src` (`?v=1` → `?v=2`) para
    furar o cache do proxy de imagem do Gmail.
 
 ### Referência de marca (já embutida no molde `tortas/`)
@@ -85,7 +100,8 @@ imagem PNG**, nunca como CSS/SVG.
   cinza + selo) → validade → [frase] → CTA "COMPRAR AGORA" → footer chocolate**.
 - Footer fixo (não alterar): descrição institucional; links Perguntas Frequentes / Privacidade
   e Cookies / Termos de uso / Contato; WhatsApp 11 96190-5468; Televendas 11 4673-1228;
-  vendas@artefoods.com.br; botão "NOS SIGA!"; rodapé com `%unsubscribe%`.
+  vendas@artefoods.com.br; botão "NOS SIGA!"; rodapé com
+  `href="{{unsubscribe_url}}"`.
 
 ### Como gerar `header.png` / `selo.png` se você só tiver o mockup (opcional, avançado)
 Se não receber as imagens prontas, dá para renderizá-las a partir de um HTML isolado (veja
@@ -102,5 +118,8 @@ normal é **receber header e selo já exportados** do designer e só colocá-los
 - [ ] Preenchi todos os `{{...}}` no prompt (slug, subject, textos, cupom, validade).
 - [ ] Confirmei o código e o valor do cupom com o marketing.
 - [ ] Rodei o preview e conferi **desktop + celular**.
+- [ ] `node scripts/check-email-opt-out.mjs` terminou com `OK`.
 - [ ] `git push` feito e a URL `.../{{slug}}/` abre com a arte certa.
-- [ ] Enviei um **teste real** (RD Station) para mim antes do disparo em massa.
+- [ ] Fiz o teste visual no Módulo Works.
+- [ ] Antes do disparo em massa, uma campanha real para uma lista interna abriu
+  “Descadastro realizado” ao clicar em **Descadastre-se**.
