@@ -8,7 +8,7 @@
     body { margin:0; padding:0; background:#f0f0f2; font-family: Arial, Helvetica, sans-serif; }
     .email-wrap { width:600px; max-width:600px; margin:0 auto; background:#ffffff; position:relative; }
     .email-img { display:block; width:600px; max-width:100%; height:auto; border:0; }
-    .hotspot { position:absolute; display:block; overflow:hidden; text-indent:-9999px; }
+    .hotspot { position:absolute; display:block; overflow:hidden; text-indent:-9999px; z-index:2; }
     .unsubscribe {
       display:block;
       width:600px;
@@ -24,7 +24,6 @@
     }
     @media only screen and (max-width: 620px) {
       .email-wrap, .unsubscribe { width:100% !important; }
-      .hotspot { display:none !important; }
     }
   </style>
 </head>
