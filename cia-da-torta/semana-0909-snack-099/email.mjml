@@ -1,0 +1,87 @@
+<mjml lang="pt-BR">
+  <mj-head>
+    <mj-title>Cia da Torta | Semana 09.09</mj-title>
+    <mj-preview>Aproveite 1 produto por R$0,99 e frete grátis a partir de R$99.</mj-preview>
+    <mj-font name="Nunito" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&amp;display=swap" />
+    <mj-breakpoint width="480px" />
+    <mj-attributes>
+      <mj-all font-family="Nunito, Arial, Helvetica, sans-serif" />
+      <mj-text padding="0" />
+      <mj-image padding="0" border="0" />
+      <mj-button border-radius="100px" font-family="Nunito, Arial, Helvetica, sans-serif" font-weight="900" />
+    </mj-attributes>
+    <mj-style inline="inline">
+      a { color: inherit; }
+      .footer-link { color: #ffffff !important; text-decoration: none !important; }
+      .unsubscribe { color: #f6d6a4 !important; text-decoration: underline !important; }
+    </mj-style>
+    <mj-style>
+      @media only screen and (max-width:620px) {
+        .content-pad > table > tbody > tr > td { padding: 34px 26px 28px 26px !important; }
+        .footer-pad > table > tbody > tr > td { padding: 30px 30px 28px 30px !important; }
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#ebebee" width="600px">
+    <mj-section padding="0" background-color="#ffffff">
+      <mj-column padding="0">
+        <mj-image src="https://leonardoffaria.github.io/arte-foods-emails/cia-da-torta/semana-0909-snack-099/hero.png?v=1" href="https://ciadatorta.com.br/?utm_source=email&amp;utm_medium=email&amp;utm_campaign=semana-0909-snack-099&amp;utm_content=hero" width="600px" alt="Semana 09.09 Cia da Torta: aproveite 1 produto por R$0,99 e frete grátis." />
+      </mj-column>
+    </mj-section>
+    <mj-section css-class="content-pad" background-color="#ffffff" padding="34px 70px 24px 70px">
+      <mj-column padding="0">
+        <mj-text align="center" color="#151515" font-size="16px" line-height="1.45" padding="0 0 22px 0">
+          Qual sabor combina com o seu momento?
+        </mj-text>
+        <mj-text align="center" color="#151515" font-size="16px" line-height="1.45" padding="0 0 22px 0">
+          Tem dias que pedem uma mini torta salgada para acompanhar o café. Em outros, a vontade é de uma mini torta doce, uma mini quiche ou até um suco para completar a sua pausa do dia. 💛
+        </mj-text>
+        <mj-text align="center" color="#151515" font-size="16px" line-height="1.45" padding="0 0 22px 0">
+          Na Cia da Torta, não faltam opções para você escolher de acordo com o momento e com a vontade do dia.
+        </mj-text>
+        <mj-text align="center" color="#151515" font-size="16px" line-height="1.45" padding="0 0 22px 0">
+          E tem um motivo a mais para variar no pedido: <strong style="font-weight:700;">na compra de 10 produtos, a 10ª unidade sai por apenas R$0,99.</strong>
+        </mj-text>
+        <mj-text align="center" color="#151515" font-size="16px" line-height="1.45" padding="0">
+          Além disso, <strong style="font-weight:700;">pedidos a partir de R$99 têm frete grátis.</strong>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#ffffff" padding="22px 0 20px 0">
+      <mj-column padding="0">
+        <mj-button href="https://ciadatorta.com.br/?utm_source=email&amp;utm_medium=email&amp;utm_campaign=semana-0909-snack-099&amp;utm_content=cta" background-color="#b22000" color="#ffac1e" font-size="16px" inner-padding="13px 25px" padding="0">ESCOLHA SEUS SABORES</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#ffffff" padding="0 70px 28px 70px">
+      <mj-column padding="0">
+        <mj-text align="center" color="#3b3b3b" font-size="10px" font-style="italic" line-height="1.35" padding="0">Ofertas válidas por tempo limitado. Ao adicionar 10 produtos ao carrinho, o item de menor valor terá seu preço alterado automaticamente para R$0,99.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section css-class="footer-pad" background-color="#4d1a00" padding="30px 70px 24px 70px">
+      <mj-column width="36%" vertical-align="top" padding="0 24px 0 0">
+        <mj-image src="https://leonardoffaria.github.io/arte-foods-emails/cia-da-torta/semana-0909-snack-099/footer-logo.png?v=1" alt="Cia da Torta" width="106px" align="left" padding="0 0 24px 0" />
+        <mj-text align="left" color="#ffffff" font-size="10px" line-height="1.45" padding="0">Sabores artesanais feitos com carinho para o seu dia a dia. Tortas e quiches entregues na sua porta.</mj-text>
+      </mj-column>
+      <mj-column width="34%" vertical-align="bottom" padding="0 18px 0 0">
+        <mj-text align="left" color="#ffffff" font-size="10px" line-height="1.65" padding="0">
+          <a class="footer-link" href="https://ciadatorta.com.br/perguntas-frequentes">Perguntas Frequentes</a><br />
+          <a class="footer-link" href="https://ciadatorta.com.br/privacidade">Privacidade e Cookies</a><br />
+          <a class="footer-link" href="https://ciadatorta.com.br/termos-de-uso">Termos de uso</a><br />
+          <a class="footer-link" href="https://ciadatorta.com.br/contato">Contato</a>
+        </mj-text>
+      </mj-column>
+      <mj-column width="30%" vertical-align="middle" padding="0">
+        <mj-button href="https://www.instagram.com/ciadatortaoficial/" background-color="#5f6f52" border="1px solid #ffffff" color="#ffffff" font-size="11px" inner-padding="8px 18px" padding="0 0 20px 0">NOS SIGA!</mj-button>
+        <mj-text align="left" color="#ffffff" font-size="10px" line-height="1.8" padding="0">
+          <a class="footer-link" href="https://wa.me/5511924565515?text=Oi%2C%20vim%20pelo%20email%20da%20Semana%2009.09">(11) 92456-5515</a><br />
+          <a class="footer-link" href="mailto:contato@ciadatorta.com.br">contato@ciadatorta.com.br</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#4d1a00" padding="0 70px 26px 70px">
+      <mj-column padding="0">
+        <mj-text align="center" color="#f6d6a4" font-size="10px" line-height="1.5" padding="0">©2026 Cia da Torta · <a class="footer-link" href="https://ciadatorta.com.br">ciadatorta.com.br</a> · <a class="unsubscribe" href="{{unsubscribe_url}}">Descadastre-se</a></mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
